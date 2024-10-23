@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 양식</title>
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <div>
+                <legend>계정정보</legend>
+                <label for="user_id">아이디</label>
+                <input type="text" id="user_id" required>
+                <button>중복확인</button>
+            </div>
+            <div>
+                <label for="user_pw">비밀번호</label>
+                <input type="password" id="user_pw">
+            </div>
+            <div>
+                <label for="user_pw_check">비밀번호 확인</label>
+                <input type="password" id="user_pw_check">
+            </div>
+        </fieldset>
+        <fieldset>
+            <div>
+            <legend>개인정보</legend>
+            <label for="user_name">성함</label>
+            <input type="text" id="user_name" maxlength="6">
+            </div>
+            <div>
+                <span>성별</span>
+                <input type="radio" id="genger_man" name="gender" checked><label for="genger_man">남자</label>
+                <input type="radio" id="gender_woman" name="gender"><label for="gender_woman">여자</label>
+                <input type="radio" id="gender_no" name="gender"><label for="no">선택안함</label>
+            </div>
+            <div>
+                <span>생년월일</span>
+                <select id="user_year">
+                    <option value="선택안함">출생년도선택</option>
+                    <option>2005</option>
+                    <option>2004</option>
+                    <option>2003</option>
+                    <option selected>2002</option>
+                    <option>2001</option>
+                    <option>2000</option>
+                    <option>1999</option>
+                    <option>1998</option>
+                    <option>1997</option>
+                    <option>1996</option>
+                    <option>1995</option>
+                    <option>1994</option>
+                    <option>1993</option>
+                    <option>1992</option>
+                    <option>1991</option>
+                    <option>1990</option>
+                </select>
+                <label for="user_year">년도</label>
+                <select id="user_month">
+                <option value="월 선택안함">월 선택</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                </select>
+                <label for="user_month">월</label>
+
+                <select id="user_day">
+                    <option value="일 선택안함">일 선택</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                    <option>31</option>
+                </select>
+                <label for="user_day">일</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>기타정보</legend>
+            <div>
+                <span>취미</span>
+                <input type="checkbox" id="hobby1" checked><label for="hobby1">영화 시청</label>
+                <input type="checkbox" id="hobby2"><label for="hobby2">운동</label>
+                <input type="checkbox" id="hobby3"><label for="hobby3">연극 시청</label>
+                <input type="checkbox" id="hobby4"><label for="hobby4">음악 감상</label>
+                <input type="checkbox" id="hobby5"><label for="hobby5">팝업행사 참여</label>
+                <input type="checkbox" id="hobby6"><label for="hobby6">액티비티 참여</label>
+            </div>
+            <div>
+                <label for="user_text">자기소개</label>
+                <textarea id="user_text">최대 3000자까지 작성해주세요.</textarea>
+            </div>
+        </fieldset>
+        <button type="submit">가입하기</button>
+        <!-- <input type="reset" value="다시작성"> -->
+         <button type="reset">다시작성</button>
+    </form>
+</body>
+</html>

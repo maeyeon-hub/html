@@ -1,0 +1,117 @@
+/* 마진과 패딩 작업을 할때 : 모든 태그를 선택(*) 마진과 패딩을 0px으로 설정 */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.box{
+/* 각각 테두리 지정하는 방법 */
+
+    /* border-left-width: 1px;
+    border-right-style: solid;
+    border-left-color: red; */
+    
+    /* border-left: 1px solid red; */
+    /* 위 세줄의 축약 */
+
+    /* border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: red; */
+
+    /* border-top: 1px solid red; */
+    /* 위 세줄의 축약 */
+
+    /* border-right-width:1px ;
+    border-right-style:solid ;
+    border-right-color:red ; */
+
+    /* border-right: 1px solid red; */
+    /* 위 세줄의 축약 */
+
+    /* border-bottom-width: 1px;
+    border-bottom-style:solid ;
+    border-bottom-color: red; */
+
+    /* border-bottom: 1px solid red; */
+    /* 위 세줄의 축약 */
+
+/* 사방의 테두리 함께 지정하는 방법 */
+    border: 1px solid red;
+
+/* 테두리 바깥쪽 여백 지정 */
+    /* margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px; */
+
+    /* 위 네줄의 축약 - 사방에 똑같은 여백을 줌*/
+    /* margin: 100px; */
+
+    /* 위 네줄의 축약 - 위아래 50, 좌우 100 여백을 줌*/
+    /* margin: 50px 100px; */
+
+    /* 위 네줄의 축약 - 위 20, 좌우 100, 아래 50 여백을 줌 */
+    /* margin: 20px 100px 50px; */
+
+    /* 위 네줄의 축약 - 위10, 오른쪽20, 아래30, 왼쪽40 여백을 줌 (시계방향으로 적용) */
+    margin: 10px 20px 30px 40px;
+}
+
+.box2{
+    border: 1px solid blue;
+    margin-top: 10px;
+    /* 태그가 인접한 경계의 마진은 둘 중 큰값으로 적용되는 특징이 있다. (위아래마진 = 큰값으로 적용, 좌우마진 = 둘다 적용(합쳐짐) */
+
+/* 테두리 안쪽 여백 지정 */
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    /* 위 네줄의 축약형도 margin과 같음 */
+
+}
+
+.box2 p{
+    border: 1px solid red;
+}
+
+/* html{
+    border: 1px solid pink;
+} */
+
+/* body{
+    border: 1px solid green;
+} */
+
+.line1{
+    border: 1px solid red;
+    /* 인라인레벨은 테두리가 텍스트 라인대로 생성되며 가로세로 규격이 없어 개발자 툴에 수치가 auto로 설정된다 */
+    padding: 10px;
+    /* 인라인레벨태그는 박스형태의 컨텐츠박스가 아니고 라인형태이기 때문에 
+    위아래 padding은 쓰지 않고 좌우 padding만 사용한다 */
+    margin: 10px;
+    /* margin또한 padding과 같이 좌우 margin만 사용한다 */
+}
+
+#container{
+    border: 10px solid darkorchid;
+    width:300px; /* 너비를 지정하지 않으면 auto값으로 지정되어 있음*/
+    /* 너비를 지정하는 것은 컨텐츠 박스의 너비를 지정하는 것, border와 padding값은 별개 */
+    /* 높이를 지정하지 않으면 auto값으로 지정되어 있으며 컨텐츠의 크기에 따라 높이는 변동됨 */
+
+    /* height: 50px; */
+    /* height를 지정하는 것은 좋지 않을 수 있기에 auto로 두는 것이 좋음 */
+    /* 태그는 경계선에 맞추어 배치됨 */
+    padding: 20px;
+    box-sizing: content-box;
+    /* 박스 사이즈가 컨텐츠박스에 맞추어져 있음 */
+}
+
+.box3{
+    border: 10px solid darkorange;
+    width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    /* 박스 사이즈가 테두리에 맞추어져 있어 모든것을 더했을 때 지정한 너비이 됨 */
+    /* 테두리와 여백은 존재해야하기 때문에 컨텐츠 박스의 사이즈가 테두리와 너비 사이즈를 합친 값만큼 줄어들음 */
+}

@@ -1,0 +1,85 @@
+html{
+    background-color: gray;
+}
+
+.box{
+    border: 5px solid black;
+    width: 300px;
+    height: 300px;
+}
+
+.a{
+    transform: translateX(100%);
+    /* x축으로 수치만큼 이동하는 속성 */
+    /* 100%는 너비 300px에 대한 100%이다. */
+}
+
+.b{
+    transform: translateY(-50%);
+    /* y축으로 수치만큼 이동하는 속성 */
+    /* 50%는 높이 300px에 대한 50%이다. */
+}
+
+/* c클래스에게 transformZ를 적용해주기 위해 원근감을 주는 속성 */
+.parent{
+    background-color: lightcyan;
+    perspective: 1000px;
+    /* 원근감 공간 생성 속성( 앞 뒤로 1000px생성 ) */
+    perspective-origin: 0%, 50%;
+    /* 기본값 : 50% 50% */
+    /* 가장 먼곳의 좌표(기준점)를 설정할 수 있다. */
+    min-height: 900px;
+}
+.c{
+    transform: translateZ(-100px);
+    /* 가운데를 중점으로 사방으로 멀어지는 구조로 부모 영역안에서 움직이는 것, 가운데 중점은 제일 멀리있다고 생각하면 되며 양수를 사용할 경우 가운데에서 점점 멀어(크기가 커짐)지고 음수를 사용할 경우 점점 가운데로 가까워(크기가 작아짐)지는 것을 볼 수 있음 */
+}
+
+.d{
+    transform-origin: 100% 50%;
+    /* 기준점을 지정할 수 있는 속성 */
+    /* 기본값 : 50% 50% */
+    transition: all 1s ease 0s;
+}
+.d:hover{
+    transform: rotate(-30deg);
+    /* 태그를 회전시키는 속성 */
+    /* 단위는 deg를 사용 */
+    /* + : 오른쪽으로 회전 - : 왼쪽으로 회전 */
+}
+
+.e,.f{
+    transition: all 3s ease 0s;
+}
+.e:hover{
+    transform: rotateY(360deg);
+}
+.f:hover{
+    transform: rotateX(180deg);
+}
+
+.g{
+    margin: 0 auto;
+    transition: all 1s ease 0s;
+    transform-origin: 0% 50%;
+    /* 오른쪽으로 커지게 하기 */
+}
+.g:hover{
+    transform: scaleX(200%);
+}
+
+.h{
+    transition: all 1s ease 0s;
+}
+.h:hover{
+    transform: scaleY(200%);
+}
+
+.i{
+    transition: all 1s ease 0s;
+    margin: 0 auto;
+}
+.i:hover{
+    transform: scale(2,3);
+    /* scale(2) 가로 안에 값을 1개 입력시 x,y축 둘다 적용한다는 축약 표현 */
+}

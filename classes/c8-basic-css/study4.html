@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일의 상속</title>
+    <style>
+        .frame{color: green;}
+        .parent{color: red;}
+        /* 10점 */
+        h3{color: blue;}
+        /* 1점 */
+        /* 상속스타일의 우선순위가 높더라도 언제라도 후순위*/
+        /*  부모와 할머니태그에 각각 적용한다고 했을 때 부모의 자식태그는 부모의 스타일을 적용한다 */
+        .parent h3{color: aqua;}
+        div.parent h3 {
+            color: darkcyan;
+            font-size: 30px;
+            background: #97e3ed;
+        }
+    </style>
+
+
+
+</head>
+
+
+
+
+<body style="background-color: beige;">
+    <h1>스타일의 상속</h1>
+    <p>부모태그가 자식태그에게 스타일을 물려주는 역할</p>
+    <p>스타일의 상속은 언제나 일어나지 않는다. -> 모든css속성이 자식태그에게 상속되지는 않는다.</p>
+    <P>주로 글씨색상과 크기 등 글씨와 관련된 css속성은 상속된다.</P>
+    <p>부모로부터 상속받는 상속스타일은 우선순위점수와 관계없이 언제나 후순위로 밀린다</p>
+
+    <div class="parent">
+        <h3>title</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta labore earum quam eveniet repellat iste vel vitae! Similique veritatis laboriosam reiciendis molestiae, excepturi amet blanditiis corrupti laborum voluptates, neque minus.</p>
+        <div class="frame">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, tempore debitis sapiente at illum quidem? Necessitatibus laudantium officiis in illo eos incidunt accusamus corrupti quasi deserunt? Quisquam cupiditate maxime dolor.</p>
+        </div>
+    </div>
+</body>
+</html>

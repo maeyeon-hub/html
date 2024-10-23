@@ -1,0 +1,116 @@
+*{margin: 0;padding: 0;}
+/* 상단영역 */
+header{
+    width: 1280px;
+    height: 215px;
+    background-color:beige;
+    margin: 0 auto;
+}
+
+/* 메인영역 */
+main{
+    width: 1280px;
+    min-height: 300px; /* 헷갈림 방지 - 최소 높이값설정*/
+    background-color:lightsalmon;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+}
+/* 메인-왼쪽영역 */
+.left{
+    background-color: lightpink;
+    width: 830PX;
+    /* margin-right: 30px; */
+}
+.a{
+    background-color: blueviolet;
+    height: 130px;
+    /* margin-bottom: 16px; */
+}
+.b{
+    background-color: blueviolet;
+    height: 426px;
+    /* margin-bottom: 16px; */
+}
+.c{
+    background-color: blueviolet;
+    height: 560px;
+    /* margin-bottom: 16px; */
+}
+.d{
+    background-color: blueviolet;
+    height: 858px;
+    /* margin-bottom: 16px; */
+}
+/* 영역마다 마진바텀16픽셀씩 주고 마지막 영역의 마진은 없애기 */
+.left>div{
+    margin-bottom: 16px;
+}
+.left>div:last-of-type{
+    margin-bottom: 0;
+}
+
+/* 메인-오른쪽 영역 */
+.right{
+    background-color: aquamarine;
+    width: 420PX;
+}
+.right>div{
+    margin-bottom: 16px;
+}
+.right>div:last-of-type{
+    margin-bottom: 0;
+}
+.e{
+    background-color: cornflowerblue;
+    height: 164px;
+}
+.f{
+    background-color: cornflowerblue;
+    height: 240px;
+}
+.g{
+    background-color: cornflowerblue;
+    height: 80px;
+}
+.h{
+    background-color: cornflowerblue;
+    height: 172px;
+}
+.i{
+    background-color: cornflowerblue;
+    height: 236px;
+}
+.j{
+    background-color: cornflowerblue;
+    height: 236px;
+}
+.k{
+    background-color: cornflowerblue;
+    height: 240px;
+}
+.l{
+    background-color: cornflowerblue;
+    height: 516px;
+}
+.m{
+    background-color: cornflowerblue;
+    height: 80px;
+}
+
+/* 하단영역 */
+footer{
+    /* footer영역이 모니터의 전제의 너비 => 값을 auto로 설정, 따로 지정하지 말아야함*/
+    /* 컨텐츠 박스는 footer안에 영역을 하나 더 만들어서 너비 지정 */
+    background-color:lightgray;
+    height: 430px;
+    padding: 30px 0 78px;
+    box-sizing: border-box;
+}
+/* 하단-컨텐츠영역 */
+.innerFooter{
+    width: 1280px;
+    background-color: lightgreen;
+    margin: 0 auto;
+}

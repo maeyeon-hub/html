@@ -1,0 +1,45 @@
+.box{
+    background: lightskyblue;
+    width: 500px;
+    padding: 20px;
+}
+.box section{
+    border: 1px solid red
+}
+.box section:nth-of-type(1){
+    height: 40px;
+}
+.desc{
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+}
+.hidden{
+    overflow: hidden;
+    /* 컨텐츠 박스보다 흘러넘치는 내용을 없애는 방법 ( 숨겨진 내용 볼 수 없음) */
+}
+.scroll{
+    overflow: scroll;
+    /*  컨텐츠 박스보다 흘러넘치는 내용을 스크롤을 통해 컨텐츠 박스 안에서 볼 수 있게 하는 방법 */
+    /* auto값 사용 가능 */
+}
+.over_y{
+    overflow-y: scroll;
+    /* 컨텐츠 박스보다 흘러넘치는 내용을 y축 스크롤만을 통해 컨텐츠 박스 안에서 볼 수 있게 하는 방법 */
+    /* auto값 사용 가능 */
+}
+.over_x{
+    white-space: nowrap;
+    /* 텍스트를 박스로 감싸지 않아 한줄로 나타나게 하겠다. */
+    overflow-x: scroll;
+    /* 컨텐츠 박스보다 흘러넘치는 내용을 x축 스크롤만을 통해 컨텐츠 박스 안에서 볼 수 있게 하는 방법 */
+    /* auto값 사용 가능 */
+}
+.auto{
+    overflow: auto;
+    /* 내용에 반응하여 내용이 컨텐츠 박스보다 넘칠때 스크롤바가 생기며, 내용이 적을 경우 스크롤바가 없어짐 */
+}
+.visible{
+    overflow: visible;
+    /* overflow의 기본값, 컨텐츠 박스보다 흘러넘치게 나옴*/
+}

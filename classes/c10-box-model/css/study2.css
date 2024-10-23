@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box1{
+    border: 10px solid black;
+    width: 50%;
+    /* 부모태그 너비의 50%만큼 지정한다는 뜻 */
+}
+
+.box2{
+    margin-top: 50px;
+    border: 10px solid black;
+    width: 1000px; /* 너비의 고정값 */
+}
+.box2 section{
+    border: 10px solid saddlebrown;
+    width: 50%; /* box2 너비의 50%로 지정 */
+}
+.box3{
+    border: 10px solid black;
+    margin-top:50px ;
+    width: 800px;
+}
+.box3 section{
+    border: 10px solid darkgreen;
+    /* width: 50%; = 부모태그인 box3의 너비의 50% 지정 */
+    width: 50vw;
+    /* vw단위는 viewport with - 화면너비의 기준으로 지정하는 것  (%와는 다른 개념)*/
+    height: 30vh;
+    /* vh단위는 viewport height */
+}
+
+.box4{
+    border: 10px solid black;
+    margin-left: 100px;
+    margin-top: 50px;
+    /* 컨텐츠 박스의 너비 = 브라우저의 너비에서 120px만큼 제외한 너비 */
+}
+.box5{
+    border: 10px solid black;
+    margin-top: 50px;
+    margin-left: 100px;
+    width: 100%; /* body태그(부모)의 너비의 50% */
+    /* 언제나 브라우저의 너비의 120px(border + margin-left)만큼 더 공간이 필요하기 때문에 브라우저 하단에 스크롤이 생김 */
+}

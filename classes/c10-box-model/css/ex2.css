@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.frame_wrap{
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+    padding: 20px 30px;
+        /* 위아래 좌우 */
+    width: 1000px;
+}
+.common_frame{
+    border-bottom: 1px solid #555;
+    padding: 20px;
+}
+.frame_1{
+    padding-top: 30px;
+}
+.common_frame.frame_2{
+    border: none;
+    /* 1px없어짐 */
+}
+.a{
+    padding: 10px 0px;
+    /* 위아래 좌우 */
+    background-color: salmon;
+    height: 150px;
+}
+.b{
+    background-color: sandybrown;
+    box-sizing: border-box;
+    /* 패딩,보더뺀 값이 컨텐츠 박스 */
+    height: 200px;
+    border: 10px solid seagreen;
+}
+.c{
+    background-color: saddlebrown;
+    height: 250px;
+    padding: 10px;
+    border: 10px solid violet;
+    box-sizing: border-box;
+    /* 패딩, 테두리를 뺀 값이 컨텐츠박스 */
+}
+
+/* 
+    A: frame_wrap클래스의 테두리를 포함한 박스너비 = 1060
+    컨텐츠박스 너비 1000 + 좌우 패딩 60
+
+    B: a클래스의 테두리를 포함한 박스높이 = 170
+    위아래패딩 20 + 높이 150
+
+    C: b클래스의 컨텐트박스의 높이 180
+    높이 200 - 위아래패딩 20
+
+    D: c클래스의 테두리를 포함한 박스의 높이 = 250
+    높이 250 (패딩과, 테두리 포함)
+
+    E: frame_1클래스의 테두리를 포함한 박스의 높이 421
+    a클래스170 + b클래스200 + 위패딩30 + 아래패딩20 + 아래 테두리1
+
+    F: frame_2클래스의 테두리를 포함한 박스의 높이 290
+    c클래스250 + 위아래패딩20
+
+    A+B+C+D+E+F = 2371
+
+
+*/

@@ -1,0 +1,81 @@
+.box{
+    border: 10px solid black;
+    width: 400px;
+    height: 400px;
+}
+.a{
+    position: relative;
+    /* 상하좌우로 이동할 준비를 하며 아래에 태그가 존재할 때 아래태그는 밀리지 않고 올라가지도 않고 그 위치 그대로 있음 */
+    /* left, right, top, bottom 각 방향마다 하나만 사용 */
+    right: 100px; 
+    /* 박스의 안쪽 방향으로 상대적 이동 (사용한 방향과 반대로 움직이는 것)*/
+    bottom: 100px;
+    /* 방향을 설정해서 움직이더라도 position: relative;를 사용하면 원래 있었던 위치에 다른 태그들이 올 수 없다 */
+}
+.b{
+    background-color: aqua;
+    position: absolute;
+    /* 공중에 뜨게 되기 때문에 다음에 오는 태그들의 내용의 위로 올라가게 되어 겹쳐져있는 것 처럼 보임*/
+    /* left, right, top, bottom 각 방향마다 하나만 사용 */
+    /* 부모태그를 탐색하여 position이 부모에게 설정되어 있다면 부모태그를 기준으로 방향 배치됨*/
+    /* body 태그에는 position: relative;가 적용되어 있음 */
+    right: 100px;
+    bottom: 100px;
+    z-index: 2;
+    /* 배치 순서를 정할 수 있는 속성 */
+}
+.c{
+    background-color:beige;
+    position: absolute;
+    right: 150px;
+    bottom: 150px;
+    z-index: 1;
+}
+.d{
+    background-color:darkseagreen;
+    position: absolute;
+    right: 200px;
+    bottom: 200px;
+}
+
+.boxwrap{
+    border: 10px solid orange;
+    height: 200vh;
+    position: relative;
+}
+.innerBox{
+    border: 10px solid green;
+    width: 1000px;
+    height: 100vh;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+}
+
+.frame{
+    border: 10px solid red;
+    position: relative;
+    height: 500px;
+    /* 자식에게 position: absolute; 사용하면 부모는 포함하는 자식이 없는 관계로 높이가 0이 되기 때문에 높이를 명확히 주어야 한다.*/
+}
+.con{
+    border: 10px solid blue;
+    width: 60%;
+    left: 20%;
+    top: 100px;
+    position: absolute;
+}
+
+.e{
+    border: 10px solid rebeccapurple;
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    /* 화면기준 지정한 위치에 고정되어 스크롤을 움직여도 그 자리에 고정되어 보여짐 */
+}
+
+.f{
+    position: sticky;
+    left: 100px;
+    top: 100px;
+}

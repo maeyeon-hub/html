@@ -1,0 +1,75 @@
+*{margin: 0;padding: 0;}
+
+body{    
+    font-family: "Noto Sans KR", sans-serif;}
+
+.head{
+    background-size: cover;
+    height: 250px;
+    background-image: url(../img/sub_vis01_02.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.line{
+    background-image: url(../img/sub_tit_line.gif);
+    background-repeat: repeat-x;
+    width: 1200px;
+    margin: 0 auto;
+    background-position: 0 center;
+}
+
+.aa{
+    margin: 50px auto;
+    width: 1200px;
+
+}
+
+.a{
+    font-size: 20px;
+    font-weight: normal;
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+}
+
+@font-face {
+    font-family:"풀무원";
+    src: url(../font/PulmuoneLOHASBold.woff);
+}
+
+.b{
+    font-family:"풀무원";
+    text-align: center;
+    padding: 0 70px;
+    font-size: 52px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+strong{
+    font-family:"풀무원";
+    color: #7eae4b;
+}
+
+.desc{
+    font-size: 20px;
+    height: auto;
+    width: 810px;
+    background-color: #f4f4f4;
+    padding: 40px 90px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+    word-break: keep-all;
+}
+.desc1{
+    margin-bottom: 25px;
+}
+.desc2{
+    margin-bottom: 25px;
+}
+
+.desc1{
+    font-family:'풀무원';
+    font-size: 35px;
+}

@@ -1,0 +1,68 @@
+.box{
+    border: 5px solid red;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box figcaption{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* 기준 영역으로 설정된 태그의 너비, 높이 100% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.2rem;
+    opacity: 0;
+}
+.box:hover figcaption{
+    /* 마우스를 올린 클래스 */
+    opacity: 1;
+}
+.boxWrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.filter1 img{
+    filter: grayscale(0.6);
+    /* 필터를 씌우는 속성 "()" 안에 들어가는 숫자는 0~1을 사용할 수 있음 */
+}
+
+.filter2 img{
+    filter: brightness(0.2);
+}
+.filter3 img{
+    filter: blur(20px);
+}
+.filter4 img{
+    filter: hue-rotate(180deg);
+    /* 360도 돌리는 것, 음수도 가능 */
+}
+
+/* /////////////////////////////////////////////////////////////////////// */
+
+.bg{
+    background-color: indianred;
+}
+.mode1 img{
+    mix-blend-mode: color-burn;
+    /* 배경이 아래 위치해 있고 위에 이미지가 있어 이 두개가 섞이는 속성 */
+}
+.mode2 img{
+    mix-blend-mode: difference;
+}
+.mode3 img{
+    mix-blend-mode: overlay;
+}

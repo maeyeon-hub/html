@@ -1,0 +1,98 @@
+*{margin: 0;padding: 0;}
+
+.pre{
+    white-space: pre;
+}
+
+.prewrap{
+    white-space: pre-wrap;
+}
+.desc{
+    padding-bottom: 50px;
+    border-bottom: 5px solid black;
+    margin-bottom: 50px;
+    font-size: 1.4rem;
+}
+.box{
+    background-color: blue;
+    padding: 20px;
+    height: 300px;
+    width: 300px;
+    box-sizing: border-box;
+    color: white;
+}
+.box2{
+    margin: 100px 0;
+    height: 80vh; /* 화면의 80%의 높이로 설정 */
+    background-color: bisque;
+    background-image: url(../img/29c37f7770b02880045ca3d20f2bfe8a.jpg);
+    /* 이미지 영역의 배경 설정 시 사용하는 속성 , 이미지가 바둑판 식으로 배치가 됨*/
+    /* background-repeat: repeat; 
+       배경이미지 반복의 기본값(가로축, 세로축 반복) */
+    /* background-repeat: repeat-x; 
+       배경이미지 가로축으로만 반복 설정 */
+    /* 배경색이 가장 바닥에 위치하고 위에 이미지가 배치 됨 */
+    /* background-repeat: repeat-y; 
+       배경이미지 세로축으로 반복 설정 */
+    background-repeat: no-repeat;
+    /* 배경이미지 가로, 세로축 반복 안함 */
+    /* background-position: 0px 0px; 
+    배경을 배치할 위치 - 기본값(x,y)*/
+    /* background-position: 100px 200px;
+    원점에서 x축으로 100px, y축으로 200px만큼 이동 */
+    /* background-position: 50% 50%;
+    %방식으로 기입하는 방법 (x축, y축) */
+    /* background-position: center;
+    키워드 방식으로 기입하는 방법 ( right, left, top, bottom, center */
+    background-position: calc(100% - 60px) calc(100% - 70px);
+    /* calc는 계산할 수있는 속성으로 정확한 수치를 계산할 때 사용할 수 있다.(수치를 사용하는 곳에서는 모두 사용할 수 있다.) 사용할 때 부호의 앞뒤로는 띄어쓰기를 꼭 해야한다.*/
+}
+
+.box3{
+    color: aliceblue;
+    height: 100vh;
+    background-color: aquamarine; /* 필수로 넣어야하는 거 아님, 태그의 위치를 알기 위함 실전에서는 사용안해도 됨*/
+    background-image: url(../img/29c37f7770b02880045ca3d20f2bfe8a.jpg);
+    background-repeat: no-repeat;
+    background-size: 300px auto;
+    /* 배경의 사이즈 조정 속성, 기본값은 auto로 설정되어 있음(즉 이미지의 원본사이즈)*/
+    /* background-size: auto 300px; */
+    /* background-size: 100% auto; */
+    /* background-size: auto 100%; */
+    /* background-size: cover; 
+       cover : 배경 전체를 커버하여 태그의 공간을 채우게 됨(이미지 잘림 있을 수 있음) */
+    background-size: contain; /* contain : 이미지가 태그 공간안에 잘리지 않는 이미지의 최대 크기로 채우는 방식 */
+    background-position: 50% 50%;
+
+    /* ////////////////// 축약형 ////////////////// */
+    background: aquamarine url(../img/29c37f7770b02880045ca3d20f2bfe8a.jpg) no-repeat 0 0 /cover;
+    /* background-size 앞에는 꼭 '/(슬래시)' 입력 
+       [순서 지켜야 함] 색 이미지경로 반복 좌표 /사이즈 */
+    /* background는 축약현으로 쓸때 사용하는 속성 */
+}
+
+.box4{
+    width: 50vw; /* 화면 너비의 절반, 너비에다가만 사용하는 것이 아님, 상대 단위 */
+    height: 50vw;
+    background: aquamarine url(../img/29c37f7770b02880045ca3d20f2bfe8a.jpg) no-repeat 50% 50% / cover;
+    margin: 0 auto; /* 좌우 auto(중앙배치) 상하 0 */
+    margin-bottom: 50px;
+    /* background-attachment: scroll; 
+       기본값 */
+    background-attachment: fixed; /* 이미지를 화면에 고정시키고 스크롤을 움직일때 스크롤 방향대로 보이게 함 */
+    border: 1px solid white;
+}
+.box4.blend{
+    background-blend-mode: multiply; /* 혼합(필터효과) 이미지 아래 단색과 이미지가 선택한 속성으로 혼합하는 속성*/
+}
+.blur{
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    margin-top: 10%;
+    -webkit-backdrop-filter: blur(10px);
+    /* 비표준속성을 임시로 사용하고 싶다면 앞에 '-webkit-'이라고 기입하기 */
+    backdrop-filter: blur(10px); /* blur클래스 아래에 blur필터를 씌운다. */
+    /* 표준속성 : 모든 브라우저에 동일하게 표현되는 속성 */
+    /* 비표준속성 : 특정 브라우저에 표현이 다르게 되는 속성 */
+}

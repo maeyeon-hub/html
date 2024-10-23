@@ -1,0 +1,104 @@
+.a{
+    font-size: 20px;
+}
+.a p{
+    font-size: 2rem; /* 2rem : 16*2 = 32px */
+    /* 1rem은 브라우저에 기본값으로 적용된 16px임 */
+}
+.a p:nth-of-type(2n){
+    font-size: 2em; /* 부모태그에 적용 2em : 20(부모(a)태그의 폰트크기)*2 = 40px*/
+    background: papayawhip;
+    /* a클래스 자손클래스의 p태그 중에서 짝수번째를 선택 */
+}
+html{
+    font-size: 12px;
+    /* 짝수번째 이외는 12px로 적용 */
+    /* 속성을 적용하므로 지금부터 -> 1rem = 12px */
+    /* a클래스 안에있는 p태그 = 2rem = 24px */
+    /* 짝수번째 p태그 = 2em = 40px */
+}
+.desc{
+    font-size: 2rem; /* 24px */
+    /* 2rem = 24px */
+    line-height: 120%;
+    /* 24*1.2 = 28.8px */
+    /* [상대단위] */
+    line-height: 3;
+    /* 소수점으로 기입 가능 = 300%*/
+    /* 24*3 = 72px */
+    line-height: 100px;
+    /* 100px로 지정됨 [절대단위도 이용 가능] */
+    border: 1px solid black;
+    /* 컨텐츠박스 : 72*3 = 216px + 2px(테두리) = 218px */
+}
+.c{
+    font-weight: bold;
+}
+.d{
+    font-style: italic;
+}
+.d address{
+    font-style: normal;
+}
+.e{
+    letter-spacing: 20px;
+}
+.e p:last-of-type{
+    letter-spacing: -2px;
+}
+.f{word-spacing: 30px;
+
+}
+.nowrap{
+    white-space: nowrap;
+    /* rap : 줄바꿈 */
+}
+.pre{
+    white-space: pre;
+}
+.h>:last-of-type{
+    text-indent: 50px;
+    /* 첫번째 줄만 50px만큼 들여쓰기 됨 */
+    /* blockquote = 마진 레프트 */
+}
+.i ul>li:nth-of-type(1){
+    text-decoration: underline;
+}
+.i ul>li:nth-of-type(2){
+    text-decoration: none;
+}
+.i ul>li:nth-of-type(2) a{
+    text-decoration: none;
+}
+.i ul>li:nth-of-type(3){
+    text-decoration: line-through;
+}
+.j ul+p{
+    border: 1px solid black;
+    text-align: justify;
+    width: 400px;
+}
+.k ul+p{
+    text-transform: uppercase;
+    text-transform: lowercase;
+    text-transform: capitalize;
+}
+.l>*:last-of-type{
+    border: 1px solid black;
+    word-break: break-all;
+    word-break: keep-all;
+    word-break: normal;
+    /* keep-all : 한중일텍스트에서는 줄을 바꿀때 단어를 끊지 않는다. 다른 언어에서는 normal과 동일 */
+}
+.m strong{
+    border: 1px solid red;
+    font-size: 5rem; /* 60px */
+
+}
+.m i{
+    border: 1px solid blue;
+    font-size: 3rem;
+    vertical-align: top;
+    vertical-align: bottom;
+    /* vertical-align: middle; */
+}

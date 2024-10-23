@@ -1,0 +1,47 @@
+:root{
+    /* 변수를 만드는 곳 */
+    --maincolor:rgb(69, 204, 16);
+}
+
+
+.box{
+    /* 변하기 전(평상시 스타일) */
+    border: 10px solid var(--maincolor);
+    width: 400px;
+    height: 400px;
+    /* transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: linear;
+    transition-delay: 0s; */
+    /* => 축약형(순서 중요) */
+    transition: all 0.4s linear 0s;
+}
+
+.box:hover{
+    /* 변환 후 */
+    width: 300px;
+    height: 300px;
+    background-color: lightblue;
+}
+
+.box2{
+    /* 변하기 전(평상시 스타일) */
+    border: 10px solid var(--maincolor);
+    width: 400px;
+    height: 400px;
+    /* transition-property: width, height, background-color;
+    transition-duration: 0.4s, 0.4s, 0.4s;
+    transition-timing-function: linear, ease, linear;
+    transition-delay: 0s, 0.4s, 0.8s; */
+    /* 축약형 */
+    transition:
+    width 0.4s linear 0s,
+    height 0.4s ease 0.4s,
+    background-color 0.4s linear 0.8s;
+}
+.box2:hover{
+    /* 변환 후 */
+    width: 300px;
+    height: 300px;
+    background-color: rgb(241, 44, 73);
+}

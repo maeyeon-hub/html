@@ -1,0 +1,59 @@
+*{margin: 0;padding: 0;}
+
+header{
+    background-color:black ;
+}
+
+/* 헤더태그에 높이를 지정하지 말고, 각각의 헤더 영역 안의 영역에 높이를 지정 */
+.headerTop{
+    height: 48px;
+    background-color: #555;
+    border-bottom: 1px solid #fff;
+    display: flex; /* 대장 */
+    align-items: center; /* 해당 속성은 대장에게 사용 */
+}
+.topMenu{
+    list-style:none;
+    display: flex;
+    justify-content: flex-end;
+}
+    
+.headerBottom{
+    height: 72px;
+    background-color: #aaa;
+    display: flex; /* 대장 */
+    align-items: center; /*해당 속성은 대장에게 사용 */
+}
+.innerContent{
+    width: 1344px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+
+.conA{
+    height: 1217px;
+    background-color: aquamarine;
+}
+
+.conB{
+    height: 492px;
+    background-color:blueviolet ;
+}
+.conC{
+    height: 1116px;
+    background-color: coral;
+}
+.conD{
+    height: 594px;
+    background-color:darkblue;
+}
+.conE{
+    height: 518px;
+    background-color: khaki;
+}
+
+footer{
+    height: 704px;
+    background-color: lightskyblue;
+}

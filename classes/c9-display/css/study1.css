@@ -1,0 +1,33 @@
+.a{
+    background: pink;
+}
+/* 배경색이 칠해진 공간이 p태그의 공간 */
+
+.b{
+    background: salmon;
+}
+/* ul태그 공간 */
+.b li{
+    background: seagreen;
+}
+/* li태그 공간 */
+
+.c{
+    background: lightseagreen;
+    width: 400px;
+    height: 400px;
+}
+/* strong태그 공간 */
+/* 글자수에 맞추어 너비 설정 , 다음에도 같은 태그가 온다면 나란히 배치됨*/
+/* strong태그는 인라인레벨태그이므로 너비, 높이를 따로 설정한다고 하더라도 변경되지 않음 */
+.c+.a{
+    display: inline;
+}
+/* 인라인태그로 만들어주는 스타일속성 =  display: inline; */
+
+.d{
+    background: rebeccapurple;
+    width: 400px;
+    height: 400px;
+}
+/* div태그 공간 */

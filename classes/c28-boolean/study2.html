@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼항연산자 - ternary lperator</title>
+</head>
+<body>
+    <h1>삼항연산자</h1>
+    <p>조건?조건이 참일 때 남겨지는 값 : 조건이 거짓일 때 남겨지는 값</p>
+    <script>
+        let result1 = 5>3?"a":"b" // true일 경우 두가지의 값 중 앞에 있는 값이 저장됨
+        console.log(result1)
+        let result2 = ""?"배고파":"배불러" // false일 경우 뒤에 있는 값이 저장됨
+        console.log(result2)
+        let result3 = 3-3?100:50 // false
+        console.log(result3)
+        let score = 80
+        console.log(score>90?"A":score>80?"B":score>70?"C":"D") // 왼쪽에서부터 차례대로 읽어야 함
+    </script>
+</body>
+</html>

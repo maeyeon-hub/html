@@ -1,0 +1,134 @@
+*{margin: 0; padding: 0;}
+
+
+.box{ /* 가변여백, 고정컨테이너 */
+    border: 1px solid black;
+    width: 800px;
+    margin: 0 auto;
+    height: 600px;
+    display: flex;
+    /* 좌우로 배치가 됨 */
+    /* .box : flex-container / div(자식) : flex-items */
+    /* 속성 상용시 컨텐츠박스 안에 메인축(x), 교차축(y)가 생성됨 */
+    /* item들은 메인축(x)을 따라 나란히 배치됨 */
+
+    flex-direction: rox;
+    /* 메인 축의 방향을 바꾸는 속성, 기본값 row : 축의 방향이 왼쪽에서 오른쪽, 
+    속성값 row-reverse : 축의 방향이 오른쪽에서 왼쪽*/
+    /* flex-direction: column은 메인축이 y축으로 변경, column : 축의 방향이 위에서 아래,
+    column-reverse : 축의 방향이 아래에서 위  */
+
+    justify-content:row;
+    /* flex-items의 메인축 정렬 위치 */
+    /*기본값 : flex-start / flex-end, center, space-between : 양쪽 끝에 배치가 되며 컨텐츠 사이에 같은 여백이 생성됨, space-around : 컨텐츠 모든 좌우여백에 같은 여백이 생성됨
+    flex-direction: row와 justify-content속성을 함께 사용하고 싶다면 너비를 지정해야 함
+    flex-direction: column과 justify-content속성을 함께 사용하고 싶다면 높이를 지정해야 함
+    */
+
+    align-items: center;
+    /* flex-items의 교차축 정렬 위치, 기본값 : stretch  flex-start : 시작위치,  flex-end : 마침위치, center : 가운데 
+    space-between, space-around 속성 값은 사용하지 않음
+    */ 
+
+    align-content: flex-end;
+    /* 줄바꿈이 되었을 때 아이템을 그룹으로 생각하여 정렬할 위치를 지정 */
+    /* [ flex-wrap: wrap; ]이 지정되어야만 사용 가능 */
+    /* 해당 속성을 사용할 경우 교차축은 1개 */
+
+    flex-wrap: wrap;
+    /* 줄바꿈 설정 */
+    /* 기본값(줄바꿈이 안되며 영역밖으로 넘쳐남) : nowrap, 
+    줄바꿈 가능 : wrap */
+    /* 줄바꿈이 되면서 교차 축이 여러개가 생김 */
+}
+.box>div{
+    border: 1px solid green;
+}
+
+.h100{
+    height: 100px;
+    /* 같은 줄의 아이템들의 높이가 모두 100px로 지정이 됨 */
+}
+
+.box2{ /*가변여백, 고정컨테이너 */
+    border: 1px solid blue;
+    width: 1000px;
+    margin: 0 auto;
+    display: flex; /* 대장 */
+    /* flex-wrap: wrap; */
+}
+
+.box2>div{
+    border: 1px solid red;
+    /* width: 800px; */
+    /* 너비 지정 */
+    flex-basis: 200px; 
+    /* 너비 지정(display:flex를 사용했을 때 사용가능) */
+    /* 기본값 : auto (유연하다, 상황에 따라 줄어들 수 있음, 바깥으로 넘어가지 않기 위해 가지고 있는 너비가 줄어들 수 있음)*/
+    flex-shrink: 1;
+    /* 줄어드는 비율 */
+    /* 기본값 : 1 (각 아이템들의 감소 비율을1:1:,,,비율로 정하겠다.*/
+}
+
+.box2>div:nth-of-type(1){
+    flex-shrink: 0;
+    /* 남들보다 0배 감소 */
+}
+
+.box3{ /*가변여백, 고정컨테이너 */
+    border: 1px solid blue;
+    width: 800px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex; /* 대장 */
+    /* flex-wrap: wrap; */
+    align-items: center;
+}
+
+.box3>div{
+    border: 1px solid red;
+    flex-grow: 1;
+    /* 늘어나는 비율 */
+    /* 기본값 : 0 */
+    /* 컨텐츠의 점유율 + 같은 비율의 여백의 값 */
+}
+
+.box3>div:nth-of-type(1){
+    flex-grow: 3;
+    /* 남들보다 3배 증가 */
+}
+
+/* //////////// order속성 / align-self //////////////////// */
+/* 기본값 : 0 */
+/* 배치 순서 변경, 속성값의 숫자가 작을수록 먼저 배치됨 */
+.box3>div:nth-of-type(1){
+    flex-grow: 3;
+    order: 2;
+    align-self: flex-start;
+    /* 선택한 값만 정렬 위치를 지정할 수 있음 */
+}
+.box3>div:nth-of-type(2){
+    order: 1;
+    align-self: stretch;
+    /* 선택한 값만 정렬 위치를 지정할 수 있음 */
+}
+
+
+
+.box4{
+    border: 1px solid black;
+    width: 80%;
+    min-height: 50vh;
+    margin: 0 auto;
+    display: flex;
+}
+
+/* Q) side클래스 너비 200px, contents클래스는 나머지 영역 차지하게 만드시오. */
+.side{
+    background: lightblue;
+    flex-basis: 200px;
+}
+.contents{
+    background: lightcoral;
+    flex-grow: 1;
+}

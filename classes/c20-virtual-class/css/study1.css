@@ -1,0 +1,40 @@
+h1:hover{
+    background-color: blue;
+    color: white;
+    /* 마우스를 올렸을 때의 스타일 지정 */
+}
+
+h1:active{
+    letter-spacing: 20px;
+    text-decoration: underline;
+    background-color: rgb(96, 238, 119);
+    /* 클릭을 했을 때의 스타일 지정 */
+    /* 사용자가 클릭을 했나 헷갈리게 하지 않기 위해 사용 */
+}
+p{
+    display: flex;
+    border: 1px solid green;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+p::before{
+    border: 1px solid red;
+    content:"";
+    width: 50px;
+    height: 50px;
+    background: url(../img/quot1.png) no-repeat 50% 50% / contain;
+    /* 선택한 태그 안에 첫번째 자식인 before태그를 만들고 content속성을 사용하여 내용을 입력 */
+    /* content속성을 필히 작성해야 함, 작성하지 않다면 태그 자체가 만들어지지 않음*/
+    /* before태그 = display:inline  */
+}
+p::after{
+    border: 1px solid blueviolet;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: url(../img/quot2.png) no-repeat 50% 50% / contain;
+    /* 선택한 태그 안에 마지막 자식인 after태그를 만들고 content속성을 사용하여 내용을 입력*/
+    /* content속성을 필히 작성해야 함, 작성하지 않다면 태그 자체가 만들어지지 않음 */
+    /* after태그 = display:inline  */
+}

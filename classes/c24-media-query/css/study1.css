@@ -1,0 +1,18 @@
+.wrap{
+    background: lightgoldenrodyellow;
+}
+@media (min-width:1500px){
+    /* 화면 최대 너비가 1500px인 경우 -> 1500px보다 작은 경우 적용되는 타일*/
+    .wrap{
+        background: lightcoral;
+        display: flex;
+        /* 해당 설정된 화면 사이즈에서만 적용됨 */
+    }
+}
+
+@media (min-width:1400px) and (max-width:1499px){
+    /* 화면 최소 너비가 1400px이고 최대 너비가 1400px인 경우 -> 1400px보다 크고 1499px보다 작은 경우 적용되는 타일*/
+    .wrap{
+        background: lightblue;
+    }
+}

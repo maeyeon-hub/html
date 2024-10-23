@@ -1,0 +1,78 @@
+/* 공통스타일 - 홈페이지에서 공통적으로 사용되는 스타일들을 상속설정을 하여 유지보수가 쉽게 하기 위해 */
+/* 글씨체, 글씨크기, 행간 */
+/* 폰트사이즈, 행간, 마진, 패딩 등등 단위를 rem으로 지정 */
+
+/* 폰트 등록 - 풀무원 */
+@font-face {
+    font-family: "풀무원폰트";
+    src: url(../font/PulmuoneLOHASBold.woff);
+}
+
+html{
+    font-family: "Noto Sans KR", system-ui;
+    font-size: 20px;
+    /* 1rem = 20px */
+    line-height: 1.4; /* 행간 */
+    word-break: keep-all; /* 단어를 쪼개지지 않게 하기 위한 스타일속성 */
+}
+.font_pul{
+    font-family: "풀무원폰트";
+}
+
+
+/* ///////////////////////////////상세스타일////////////////////////////////// */
+.banner{
+    border: 1px solid red;
+    height: 250px;
+    background: url(../img/sub_vis01_02.jpg) no-repeat 50% 50% / cover;
+    /* 색상 이미지 반복 위치 / 방식 */
+}
+
+main{
+    border: 1px solid blue;
+    width: 1200px;
+    margin: 0 auto; /* 중앙 배치 */
+    margin-top: 2.5rem; /* 50px을 rem단위로 변경 */
+    /* 같은 속성의 입력 순서 주의 */
+    /* margim: 50px auto 0; 이렇게 작성 해도 됨 */
+}
+
+main h2{
+    border: 1px solid green;
+    font-size: 1.5rem; /* 30xpx */
+    background: url(../img/sub_tit_line.gif) repeat-x 0 50%;
+    margin-bottom: 5rem; /* 100px */
+}
+main h2 span{
+    border: 1px solid red;
+    background: #fff;
+    padding-right: 0.9rem; /* 18px */
+}
+main h3{
+    border: 1px solid purple;
+    font-size: 2.6rem; /* 52px */
+    text-align: center;
+    padding: 0 3.5rem;
+    margin-bottom: 2.5rem;
+}
+main h3 strong{
+    color: #7eae4b;
+}
+section.box{
+    border: 1px solid brown;
+    width: 810px;
+    box-sizing: border-box;
+    padding: 2rem 4.5rem 2.5rem; /* 40px 90px 50px */
+    background: #f4f4f4;
+    margin: 0 auto;
+    text-align: center;
+}
+.box h4{
+    border: 1px solid black;
+    font-size: 1.75rem; /* 3.5px */
+    margin-bottom: 1.25rem;
+}
+.box p:nth-of-type(1){
+    border: 1px solid orange;
+    margin-bottom: 1.5rem; /* 30px */
+}

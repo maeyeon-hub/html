@@ -1,0 +1,118 @@
+*{margin: 0; padding: 0;}
+
+/* ////////////////////////////header//////////////////////////// */
+header{
+    height: 56px;
+    background-color: antiquewhite;
+    position: fixed; /* display가 inline-block이 됨*/
+    left: 0;
+    top: 0;
+    right: 0; /* 높이를 지정해도 되고 righr를 지정해도 화면 전체 너비로 적용 가능 */
+    /* width: 100%; */ /* box-sizeing:border-box; */
+    /*가로는 컨텐츠의 양과 브라우저의 크기가 정해져 있어 부모태그의 너비가 정해지지 않다고 해도 % 사용가능, 세로는 컨텐츠의 양과 브라우저의 크기가 한계가 없으므로 height는 부모태그의 높이가 정해져있지 않다면 %는 사용하지 않는다.*/
+    display: flex;
+    justify-content: space-between; /* 컨텐츠가 왼쪽, 오른쪽 끝에 있으며 사이 여백 동일*/
+    align-items: center;
+    padding: 0 16px;
+}
+header>div{
+    height: 24px;
+    background-color: darkgreen;
+}
+.logo{width: 170px;}
+.acount{width: 225px;}
+.search{width: 730px;}
+
+
+
+/* ////////////////////////////aside//////////////////////////// */
+aside{
+    width: 240px;
+    height: calc(100vh - 56px); /* 화면 전제의 비율에서 header 높이 뺀 거*/
+    background-color: aquamarine;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    overflow: auto; /* 스크롤 생성 */
+}
+aside>div{
+    min-height: 300px;
+    background-color: cadetblue;
+    border-bottom: 1px solid black;
+    padding: 12px;
+}
+aside>div>section{
+    min-height: 150px;
+    background-color: rgb(115, 115, 238);
+    border-bottom: 1px solid black;
+    margin-bottom: 12px;
+}
+aside>div>section:last-of-type{
+    border-bottom: none;
+    margin-bottom: 0;
+}
+/* 추가적으로 컨텐츠가 들어갈 수 있으므로 첫번째 영역보다 마지막 영역을 선택하는 것이 좋음 */
+
+/* ////////////////////////////.category//////////////////////////// */
+.category{
+    height: 56px;
+    background-color: blueviolet;
+    position: fixed; /* display가 inline-block이 됨, 포함된 컨텐츠 사이즈만큼 너비가 생성되기 때문에 따로 너비를 설정하거나, right를 주어야함*/
+    /* width: calc(100% - 240px); */
+    right: 0;
+    top: 56px;
+    left: 240px;
+}
+
+/* ////////////////////////////main//////////////////////////// */
+main{
+    background-color: coral;
+    min-height: 200vh; 
+    /* 확인차 기입한 것, 컨텐츠 내용이 설정 값보다 넘칠 경우  height:auto;로 반응*/ 
+    /* header, aside, category영역이 모두 공중에 띄워져 있으므로 main영역은 맨위부터 채워지게 되는데 그러면 내용이 보이지 않아 왼쪽, 위에 margin을 설정해야한다. */
+    margin-left: 240px;
+    margin-top: calc(56px * 2);
+    padding: 16px;
+}
+/* main{
+    background-color: cornflowerblue;
+    position: absolute;
+    left: 240px;
+    top: calc(56px * 2);
+    right: 0;
+    height: 100vh;
+    width: calc(100% - 240px)
+    z-indexe: -1
+} */
+/* main{
+    background-color: rgb(235, 237, 100);
+    position: fixed; 
+    설정 할 경우 높이는 화면기준으로 변경이 되므로 %사용 가능
+    left: 240px;
+    top: calc(56px * 2);
+    width: calc(100% - 240px);
+    overflow: auto;
+    height: calc(100% - 112px);
+} */
+.normalVideo ul{
+    display: flex;
+    flex-wrap: wrap;}
+ ul{list-style: none;}
+ .normalVideo ul li{
+    background-color: rgb(248, 230, 66);
+    height: 340px;
+    width: calc((100% - 16px * (4 - 1)) / 4);
+    /* 16px * (4 - 1) : 48px을 뜻하는 수식, 반응형 디자인할 때 편함 */
+    margin-right: 16px;
+    margin-bottom: 32px;
+ }
+ .normalVideo ul li:nth-of-type(4n){
+    margin-right: 0;
+ }
+ .normalVideo ul li:nth-last-of-type(1),
+ .normalVideo ul li:nth-last-of-type(2),
+ .normalVideo ul li:nth-last-of-type(3),
+ .normalVideo ul li:nth-last-of-type(4){
+    /* 끝 라인의 각 순서의 li 선택하여 아래 margin을 0으로 설정*/
+    margin-bottom: 0;
+ }

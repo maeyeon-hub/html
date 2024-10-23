@@ -1,0 +1,18 @@
+.a{
+    border: 1px solid red;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    /* a클래스 영역이 300,300px로 지정이 되고 그 안에서 이미지가 잘리지 않는 선의 최대한 크기로 맞추도록 설정*/
+    /* object-fit: contain; 속성을 사용하고 싶다면 가로세로 사이즈를 지정 한 후에 사용가능 */
+}
+
+.b{
+    border: 1px solid blue;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+     /* b클래스 영역이 300,300px로 지정된 안에 이미지지를 가득 채우는데 잘려서 보임 (중앙이 기본값)*/
+    object-position: 0% 0%;  
+    /* 잘리는 이미지의 위치를 좌표로 지정하여 볼 수 있는 속성, 해당 속성의 기본값 : 50% 50% (x,y)*/
+}

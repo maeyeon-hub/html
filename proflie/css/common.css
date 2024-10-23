@@ -1,0 +1,71 @@
+/* common style (공통스타일) */
+/* 1rem = 20px */
+
+
+:root{
+    --main-color:#ff7f3e;
+    --font-size-pc:20px;
+    --font-size-tab:18px;
+    --font-size-mo:14px;
+    --font-weight-bold:700;
+    --font-weight-thin:200;
+}
+
+html{
+    font-family: 'Pretendard';
+    font-size: var(--font-size-pc, 20px); /* 브라우저에 적용이 되지 않을 경우를 대비하여 본 값을 적어주기*/
+    line-height: 1.4;
+    word-break:keep-all ;
+}
+
+.innerContent{
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.btnCommon{
+    font-size: 0.9rem;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 0.8rem 2.15rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    border: 3px solid black;
+}
+
+.btnCommon:hover{
+    color: var(--main-color);
+}
+.btnCommon:active{
+    background-color: var(--main-color);
+    color: black;
+    border: 3px solid black;
+}
+
+/* pfont - 제목 강조 폰트변경 - sementic tag */
+pfont{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: italic;
+}
+/* maincolor - 강조 컬러변경 - sementic tag */
+maincolor{
+    color: var(--main-color);
+}
+h3{
+    font-size: 0.9rem;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+h4{
+    font-size: 4rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1rem;
+}
+.imgBorder{
+    border: 1.5px solid black;
+}

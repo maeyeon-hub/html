@@ -1,0 +1,40 @@
+@font-face{
+    font-family: "등록한폰트1";
+    /* 등록명은 순수영어일경우 ""(쌍따옴표)없이 등록가능하고, 한글이 있거나 띄어쓰기가 있는 경우에는 앞뒤로 ""(쌍따옴표)을 써서 등록명을 표기 */
+    src: url("../font/ChangwonDangamAsac-Bold_0712.ttf");
+}
+@font-face{
+    font-family: "찹";
+    src: url(../font/chab.ttf);
+}
+@font-face{
+    font-family: "딱";
+    src: url(../font/ddag.ttf);
+}
+.dangam{
+    font-family: "등록한폰트1";
+}
+.chab{
+    font-family: "찹";
+}
+.ddag{
+    font-family: "딱";
+}
+.ptag{
+    font-family: "등록한폰트1","찹","딱",sans-serif;
+    /* 입력한 순서대로 적용이 되지 않을 때 대안으로 다음체로 적용됨 */
+    /* sans-serif : 획이 없는 고덱체 계열로 적용 */
+    /* serif : 획이 있는 명조체 계열로 적용*/
+}
+
+.f20{
+    font-size: 20px;
+}
+.f30{
+    font-size: 30px;
+}
+
+/* 새로운 클래스를 만들지 말고 현재 클래스를 사용하여 롯데리아 딱체 글씨 크기를 50px로 만들어보시오 */
+
+.ptag.f20{font-size: 50px;}
+

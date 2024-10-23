@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrap1{
+    border: 10px solid black;
+    width: 1200px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 0 auto; /* 위아래 0, 좌우 auto */
+    /* [가변여백] 태그를 가운데로 위치하고 하싶다면 margin-left,right를 auto로 지정 */
+}
+
+.wrap2{
+    border: 10px solid black;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    /* 가변컨테이너, 가변여백 */
+}
+.wrap3{
+    border: 10px solid black;
+    margin: 0 20px;
+    margin-top: 50px;
+    /* 너비가auto이기 때문에 margin을 뺀 값을 너비라고 한다 */
+    /* 고정여백, 가변컨테이너 */
+}
